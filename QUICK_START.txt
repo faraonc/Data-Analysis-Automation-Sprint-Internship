@@ -1,0 +1,38 @@
+FAQ
+
+Q. How to process a market?
+A. The following are the steps that you need to do:
+	1. Ensure the csv file for the market is in the directory. (It normally has "Sprint_Detail" in its name.)
+	2. Ensure a folder named "pcaps" that contains all the capture files is in the directory.
+	3. Copy all the scripts and folders from the "Ubuntu" or "CentOS" folder.
+	4. In the command line terminal, change directory in the market folder.
+	5. For Ubuntu, execute the command "bash run.sh <market>_Sprint_Detail.csv"
+	6. For CentOS, execute the command "bash run.sh <market>_Sprint_Detail.csv -C"
+
+Q. How to make a summary report?
+A. The following are the steps to make a summary report after processing markets:
+	1. In the command line terminal, change directory relative to the market folder.
+	2. Copy the "market_summary.py" from the "Ubuntu" or "CentOS" folder.
+	3. The directory structure should look similar with the following:
+		->2017_1H/LasVegas
+		->2017_1H/SanDiego
+		->2017_1H/Seattle
+		->2017_1H/market_summary.py
+	4. For Ubuntu, execute the command "python3 market_summary.py -v marketFolderA/ marketFolderB/ marketFolderC/"
+	5. For CentOS, execute the command "python3.6 market_summary.py -v marketFolderA/ marketFolderB/ marketFolderC/"
+	6. Note the '/', this character is required. Take advantage of the tab completion.
+	7. A file named "Summary.xlxs" shall be generated.
+	
+Q. My Ubuntu was reinstalled. How to install tools?
+A. Use the script "install.sh". Execute "bash install.sh" if it does not work, then you can copy, paste, execute each line in the terminal.
+
+Q. My CentOS was reinstalled. How to install tools?
+A. This is the trickiest part. You may have to check the script "install.sh" and replace each "apt-get" with "yum".
+   If some of the lines do not work then you may have to manually rebuild these tools using rpm to work with python3.6.
+   It took me a lot research and I had to manually copy files to install all the tools.
+   Unfortunately, I did not expect the computer to crash and I have no log of how I managed to install tools.
+
+Q. There are bugs, and I have problems with the scripts.
+A. You can send me an email at faraonc@uw.edu or faraonc@outlook.com.
+   I will be glad to fix the problem, or even come in to fix and to explain stuff.
+   Additionally, consult the manual for further details for bugs and optimization.
